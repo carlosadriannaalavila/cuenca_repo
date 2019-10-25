@@ -3,9 +3,8 @@ services:
 - postgressql
 - docker
 env:
-- compose_file=docker-compose.yml
-  global:
-  - PGPORT=54320
+  - COMPOSE_FILE=docker-compose.yml:docker-compose.override.travis.yml
+
 install: 
 - pip install SQLAlchemy
 - pip install -U pytest
