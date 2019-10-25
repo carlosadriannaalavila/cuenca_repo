@@ -1,3 +1,8 @@
 language: python
-install: Dockerfile
+install: 
+    -pip3 install SQLAlchemy
+    -pip3 install -U pytest
+    -pip3 install psycopg2-binary
+    -apt-get install docker docker.io
+    -sudo docker pull postgres
 script: ./n_queen_test.py
