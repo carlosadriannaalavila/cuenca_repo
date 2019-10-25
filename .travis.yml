@@ -1,6 +1,13 @@
 language: python
+services:
+- postgresql
 install: 
 - pip install SQLAlchemy
 - pip install -U pytest
 - pip install psycopg2-binary
+env:
+  global:
+  - PGPORT=54320
 script: python3 ./n_queen_test.py
+before_script:
+- 
