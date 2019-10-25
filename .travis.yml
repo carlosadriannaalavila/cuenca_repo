@@ -1,1 +1,3 @@
 language: python
+install: Dockerfile
+script: ./n_queen_test.py
