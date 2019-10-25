@@ -96,7 +96,7 @@ def init_alchemy():
     global engine
     global DBSession
     global Base
-    dbname='postgresql+psycopg2://cuenca:mycu3nc4Us3r@localhost:5432/mydb'
+    dbname='postgresql+psycopg2://cuenca:mycu3nc4Us3r@localhost:5433/mydb'
     engine = db.create_engine(dbname, echo=False)
     DBSession.remove()
     DBSession.configure(bind=engine, autoflush=False, expire_on_commit=False)
