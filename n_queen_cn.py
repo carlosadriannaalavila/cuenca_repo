@@ -100,7 +100,6 @@ def init_alchemy():
     engine = db.create_engine(dbname, echo=False)
     DBSession.remove()
     DBSession.configure(bind=engine, autoflush=False, expire_on_commit=False)
-    Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
 
 def compute(nQueen):
