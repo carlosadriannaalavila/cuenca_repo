@@ -1,6 +1,7 @@
 version: "3"
-dbbackup:
-  environment:
+services:
+  dbbackup:
+    environment:
     # Postgres environment variable
     # Can be set to execute PG tools directly
     - PGHOST=db
