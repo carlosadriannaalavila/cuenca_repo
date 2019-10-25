@@ -1,13 +1,8 @@
-version: "3"
-services:
-  db:
-    image: "postgres"
-    container_name: "cuenca_postgres"
-    environment:
-      - POSTGRES_USER=cuenca
-      - POSTGRES_PASSWORD=mycu3nc4Us3r
-      - POSTGRES_DB=mydb
-    ports:
-      - "54320:5432"
-    volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+dbbackup:
+  environment:
+    # Postgres environment variable
+    # Can be set to execute PG tools directly
+    - PGHOST=db
+    - PGUSER=docker
+    - PGPASSWORD=docker
+    - PGPORT=5432
