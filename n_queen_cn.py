@@ -125,5 +125,5 @@ def compute(nQueen):
 
 #Start
 #if __name__ == 'main':
-
-compute(12)
+for z in range (17):
+    compute(z)
