@@ -1,6 +1,8 @@
 language: python
 services:
-- postgresql
+- postgres
+before_install:
+- sudo /etc/init.d/postgresql start
 install: 
 - pip install SQLAlchemy
 - pip install -U pytest
@@ -9,5 +11,5 @@ env:
   global:
   - PGPORT=54320
 script: python3 ./n_queen_test.py
-before_script:
-- 
+after_script:
+  - sudo /etc/init.d/postgresql stop
