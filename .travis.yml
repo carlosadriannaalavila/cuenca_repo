@@ -12,5 +12,5 @@ install:
 - pip install psycopg2-binary
 script:
 - docker-compose up -d
-- python3 ./n_queen_test.py
+- pytest ./n_queen_test.py
 - docker-compose down
