@@ -4,4 +4,4 @@ install: pip3 install -U pytest
 install: pip3 install psycopg2-binary
 install: apt-get install docker docker.io
 install: sudo docker pull postgres
-script: ./n_queen_test.py
+script: python3 ./n_queen_test.py
